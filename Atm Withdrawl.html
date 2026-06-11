@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM WITHDRAWL</title>
+</head>
+<body>
+    <script>
+        let balance = 1000; // Initial balance
+        let withdrawAmount = parseFloat(prompt("Enter the amount to withdraw:"));
+
+        if (isNaN(withdrawAmount) || withdrawAmount <= 0) {
+            alert("Please enter a valid amount.");
+        } else if (withdrawAmount > balance) {
+            alert("Insufficient funds. Your current balance is $" + balance);
+        } else {
+            balance -= withdrawAmount;
+            alert("Withdrawal successful! Your new balance is $" + balance);
+        }
+    </script>
+    
+</body>
+</html>
